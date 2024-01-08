@@ -1,0 +1,12 @@
+<div class="container">
+    <div ng-if="isValid" class="row">
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="item in items">
+          {{ item.category.short_name }} : {{ item.category.name}} : {{ item.menu_items.description}}
+
+            <button ng-click="onRemove({index: $index})">Don't want this one!</button>
+        </li>
+    </ul>
+    </div>
+    <div ng-if="!isValid">Nothing found</div>
+</div>
