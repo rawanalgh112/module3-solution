@@ -115,10 +115,10 @@ var allMenuItems = [];
         }).then(function (response) {
 
              allMenuItems = response.data;
-// console.log(allMenuItems);
-           return allMenuItems.filter( function (item) {
-        return item.name.toLowerCase().includes(searchTerm.toLowerCase());
-           });
+console.log("sssss" +allMenuItems);
+           return allMenuItems //.filter( function (item) {
+            //     return item.name.toLowerCase().includes(searchTerm.toLowerCase());
+            // });
 
         })
         .catch(function(error) {
@@ -136,11 +136,11 @@ var allMenuItems = [];
     //   items.splice(itemIndex, 1);
     // };
     service.removeItem = function (index) {
-      console.log("Service function >>> " + index);
-  allMenuItems.splice(index, 1);
+          console.log("Service function >>> " + index);
+    //  allMenuItems.splice(index, 1);
 
 
-      console.log(allMenuItems);
+      console.log("all>>>>>>>" +allMenuItems);
     };
 
 }
